@@ -15,26 +15,35 @@
 # result = check_3_digits([555, 99, 600])
 # print((result))
 
-def check_3_digits(list1):
+# def check_3_digits(list1):
 
-    three_digits_list = []
-    for n in list1:
-        if n in range(100,1000):
-            three_digits_list.append(n)
-        else:
-            pass
+#     three_digits_list = []
+#     for n in list1:
+#         if n in range(100,1000):
+#             three_digits_list.append(n)
+#         else:
+#             pass
     
-    return three_digits_list
+#     return three_digits_list
 
-result = check_3_digits([555, 99, 600])
-print((result))
+# result = check_3_digits([555, 99, 600])
+# print((result))
 
 
 # Dynamic Functions Practice #1
 # Create a function (all_positives) that returns True if all the values in a list are positive, and False if at least one of the values is negative. Create a list named numbers with positive and negative values.
 
-# Don't call the function, you just need to define it.
+def all_positives(numbers):
+    list = []               # creates a empty list to place neg numbers in 
 
+    for x in numbers:
+        if x >= 0: # checks the number if x is greater than 0
+            pass    # nothing happens if true 
+        else:
+            list.append(x) # adds the number to the list if false 
+    return list #returns the added lit 
+result = all_positives([-1,2,3])
+print(result) # results
 
 
 
@@ -50,3 +59,20 @@ print((result))
 
 # Dynamic Functions Practice #3
 # Create a function (count_even) that counts the number of even numbers that exist in a list (numbers), and returns the result of said count.
+
+
+def count_even(numbers):
+    evenList = []
+
+    for x in numbers:
+        if x % 2 == 0:
+            evenList.append(x)
+        else:
+            pass
+            
+    count = len(evenList)
+    return count 
+
+
+results = count_even([1, 4, 9, 8])
+
